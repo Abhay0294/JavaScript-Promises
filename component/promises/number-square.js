@@ -11,4 +11,3 @@ export async function printSquare(number) {
     console.log(error.message);
   }
 }
-console.log('The data is....', await printSquare(2));
