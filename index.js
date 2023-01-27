@@ -3,6 +3,7 @@ import './style.css';
 import { printSquare } from './component/promises/number-square';
 import { basicPromise } from './component/promises/promise-structure';
 import { promiseError } from './component/promises/error-handling';
+import { decodeFilePath } from './component/promises/regex';
 
 const appDiv = document.getElementById('app');
 
@@ -23,11 +24,16 @@ const appDiv = document.getElementById('app');
 //     console.log('Error Occured>>>', error);
 //   });
 
+// promiseError()
+//   .then((data) => {
+//     console.log('Calling error Handling', data);
+//   })
+//   .catch((error) => {
+//     console.log(error.message);
+//   });
 
-  promiseError()
-    .then((data) => {
-      console.log('Calling error Handling', data);
-    })
-    .catch((error) => {
-      console.log(error.message);
-    });
+console.log(
+  decodeFilePath(
+    'file:///c%3A/Users/SSimran/Documents/created_workspace/project_vhal_6jfp'
+  )
+);
